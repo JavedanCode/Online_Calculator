@@ -17,6 +17,34 @@ const operations = {
   "/": divide,
 };
 
+const keyMap = {
+  0: "0",
+  1: "1",
+  2: "2",
+  3: "3",
+  4: "4",
+  5: "5",
+  6: "6",
+  7: "7",
+  8: "8",
+  9: "9",
+
+  "+": "+",
+  "-": "-",
+  "*": "*",
+  "/": "/",
+
+  ".": ".",
+
+  Enter: "=",
+  "=": "=",
+
+  Backspace: "Delete",
+  Delete: "Delete",
+
+  Escape: "C",
+};
+
 //DOM Selections
 let numbers = document.querySelectorAll(".number");
 let operators = document.querySelectorAll(".operator");
@@ -24,6 +52,8 @@ let extras = document.querySelectorAll(".extra");
 let textArea = document.querySelector("textarea");
 
 //Functions
+
+//Math
 function add(a, b) {
   return a + b;
 }
@@ -59,6 +89,8 @@ function operate() {
   expression.right = "";
   justCalculated = true;
 }
+
+//Handler
 
 function renderScreen() {
   textArea.value = expression.left + expression.operator + expression.right;
@@ -170,6 +202,27 @@ function handleExtra(value) {
   }
 }
 
+function handleKey(e) {
+  if (document.activeElement === textArea) return;
+
+  const value = keyMap[e.key];
+  if (!value) return;
+
+  e.preventDefault();
+
+  if (value >= "0" && value <= "9") {
+    handleNumber(value);
+  } else if (["+", "-", "*", "/", "="].includes(value)) {
+    handleOperator(value);
+  } else {
+    handleExtra(value);
+  }
+
+  renderScreen();
+}
+
+//Updator
+
 function updateExpression() {
   const value = this.textContent;
 
@@ -184,11 +237,15 @@ function updateExpression() {
   renderScreen();
 }
 
+//Listeners
+
 function assignEventListener(buttons) {
   for (const item of buttons) {
     item.addEventListener("click", updateExpression);
   }
 }
+
+document.addEventListener("keydown", handleKey);
 
 //Calls
 
