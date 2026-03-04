@@ -1,106 +1,81 @@
-Calculator
+# Calculator – The Odin Project
 
-A simple web-based calculator built as part of the JavaScript Foundations curriculum from The Odin Project.
+This project is a fully functional web-based calculator built as part of **The Odin Project Foundations curriculum**.
 
-This project implements the logic of a basic calculator using JavaScript, HTML, and CSS, including support for keyboard input and common calculator behaviors.
+It focuses on implementing calculator logic using JavaScript while also practicing DOM manipulation, event handling, UI layout with Flexbox, and keyboard interaction.
 
-Features
+---
 
-Basic arithmetic operations
+## 📚 About The Project
 
-Addition (+)
+This calculator was built to replicate the behavior of a basic handheld calculator.
 
-Subtraction (-)
+The main goal was to strengthen understanding of:
 
-Multiplication (*)
+- JavaScript program logic
+- DOM manipulation and event listeners
+- Handling user input from both mouse and keyboard
+- Managing application state (operands and operators)
+- Implementing chained operations and repeated equals behavior
+- Handling edge cases such as negative numbers and division by zero
 
-Division (/)
+---
 
-Decimal number support
+## 🛠️ Built With
 
-Negative number handling
+- HTML5
+- CSS3 (Flexbox)
+- JavaScript (Vanilla JS)
+- Git & GitHub
 
-Continuous operations
-Example:
+---
 
-5 + 3 * 2
+## 🎯 What I Practiced
 
-Repeated equals behavior
+- Structuring JavaScript into reusable functions
+- Separating UI logic from calculator logic
+- Handling keyboard and mouse input simultaneously
+- Managing calculator state using objects
+- Preventing invalid operations (NaN cases, divide by zero)
+- Using lookup tables for operator functions
+- Building a responsive button layout using Flexbox
+- Practicing Git workflow with multiple commits
 
-5 + 3 = 8
-= 11
-= 14
+---
 
-Keyboard input support
+## 🎨 Personal Customizations
 
-Delete last digit
+In addition to the base exercise, I added:
 
-Clear the entire calculation
+- Keyboard support for calculator input
+- Delete and clear functionality
+- Repeated equals behavior (`5 + 3 = = =`)
+- Support for negative numbers
+- Custom calculator UI layout using Flexbox
+- Digital-style calculator display styling
 
-Division by zero protection
+---
 
-Built With
+## 📈 Future Improvements
 
-HTML
+- Limit display length for very large numbers
+- Add button highlight animations on keyboard press
+- Improve UI styling and visual polish
+- Add calculation history feature
+- Deploy using GitHub Pages
 
-CSS (Flexbox)
+---
 
-JavaScript
+## 📖 About The Odin Project
 
-The calculator logic is implemented using a state-based approach, tracking the left operand, operator, and right operand.
+The Odin Project is a free open-source curriculum for learning web development:  
+https://www.theodinproject.com/
 
-Keyboard Controls
-Key	Action
-0–9	Enter numbers
+---
 
-/ | Operators |
-Enter | Equals |
-Backspace | Delete last digit |
-Delete | Delete last digit |
-Escape | Clear calculator |
-. | Decimal point |
+## 👤 Author
 
-Project Structure
-calculator/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── scripts/
-│   └── script.js
-└── README.md
-What I Learned
+Built by **Soren Javedan**
 
-Through this project I practiced:
-
-DOM manipulation
-
-Event handling
-
-Separating logic into reusable functions
-
-Managing application state
-
-Handling edge cases (negative numbers, repeated equals, division by zero)
-
-Implementing keyboard controls for a web interface
-
-Creating UI layouts using Flexbox
-
-Future Improvements
-
-Possible improvements include:
-
-Limiting display length
-
-Adding keyboard button highlighting
-
-Improving UI styling and animations
-
-Adding calculation history
-
-Supporting additional operations
-
-Acknowledgements
-
-This project was completed as part of the JavaScript Foundations course from The Odin Project.
+GitHub:  
+https://github.com/JavedanCode
