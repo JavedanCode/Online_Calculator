@@ -13,7 +13,7 @@ let expression = {
 const operations = {
   "+": add,
   "-": subtract,
-  "*": multiply,
+  "×": multiply,
   "÷": divide,
 };
 
@@ -31,7 +31,7 @@ const keyMap = {
 
   "+": "+",
   "-": "-",
-  "*": "*",
+  "*": "×",
   "/": "÷",
 
   ".": ".",
@@ -212,7 +212,7 @@ function handleKey(e) {
 
   if (value >= "0" && value <= "9") {
     handleNumber(value);
-  } else if (["+", "-", "*", "÷", "="].includes(value)) {
+  } else if (["+", "-", "×", "÷", "="].includes(value)) {
     handleOperator(value);
   } else {
     handleExtra(value);
