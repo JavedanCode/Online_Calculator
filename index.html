@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./scripts/script.js"></script>
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Online Calculator</title>
   </head>
   <body>
-    <textarea readonly></textarea>
-    <button class="number">0</button>
-    <button class="number">1</button>
-    <button class="number">2</button>
-    <button class="number">3</button>
-    <button class="number">4</button>
-    <button class="number">5</button>
-    <button class="number">6</button>
-    <button class="number">7</button>
-    <button class="number">8</button>
-    <button class="number">9</button>
-    <button class="operator">+</button>
-    <button class="operator negative">-</button>
-    <button class="operator">*</button>
-    <button class="operator">/</button>
-    <button class="operator equals">=</button>
-    <button class="extra decimal">.</button>
-    <button class="extra delete">Delete</button>
-    <button class="extra clear">C</button>
+    <div class="container">
+      <textarea readonly></textarea>
+      <div class="buttons">
+        <div class="top">
+          <button class="extra delete">Delete</button>
+          <button class="extra clear">C</button>
+        </div>
+
+        <div class="row">
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+          <button class="operator">÷</button>
+        </div>
+        <div class="row">
+          <button class="number">4</button>
+          <button class="number">5</button>
+          <button class="number">6</button>
+          <button class="operator">×</button>
+        </div>
+        <div class="row">
+          <button class="number">1</button>
+          <button class="number">2</button>
+          <button class="number">3</button>
+          <button class="operator negative">-</button>
+        </div>
+        <div class="row">
+          <button class="number">0</button>
+          <button class="extra decimal">.</button>
+          <button class="operator equals">=</button>
+          <button class="operator">+</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
